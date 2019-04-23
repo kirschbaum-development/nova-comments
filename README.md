@@ -5,11 +5,11 @@
 
 This package contains an inline commenting form for any resource to easily add comments. Think a simple version of Disqus for Nova!
 
+###### Commenter Tool
 ![screenshot of the commenter resource tool](https://raw.githubusercontent.com/kirschbaum-development/nova-comments/master/screenshots/commenter.png)
-Commenter Tool
 
+###### Simple Comment Panel
 ![screenshot of the comments panel](https://raw.githubusercontent.com/kirschbaum-development/nova-comments/master/screenshots/comments-panel.png)
-Simple Comment Panel
 
 ## Requirements
 
