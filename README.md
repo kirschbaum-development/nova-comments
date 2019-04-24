@@ -1,11 +1,14 @@
-# An commenting resource tool for Nova apps
+# A commenting resource tool for Nova apps
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kirschbaum-development/nova-comments.svg?style=flat-square)](https://packagist.org/packages/kirschbaum-development/nova-comments)
 [![Total Downloads](https://img.shields.io/packagist/dt/kirschbaum-development/nova-comments.svg?style=flat-square)](https://packagist.org/packages/kirschbaum-development/nova-comments)
 
 This package contains an inline commenting form for any resource to easily add comments. Think a simple version of Disqus for Nova!
 
+###### Commenter Tool
 ![screenshot of the commenter resource tool](https://raw.githubusercontent.com/kirschbaum-development/nova-comments/master/screenshots/commenter.png)
+
+###### Simple Comment Panel
 ![screenshot of the comments panel](https://raw.githubusercontent.com/kirschbaum-development/nova-comments/master/screenshots/comments-panel.png)
 
 ## Requirements
