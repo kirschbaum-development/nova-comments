@@ -6,7 +6,7 @@ use Laravel\Nova\Nova;
 use Illuminate\Support\ServiceProvider;
 use KirschbaumDevelopment\NovaComments\Nova\Comment;
 
-class CommentableServiceProvider extends ServiceProvider
+class NovaCommentsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
