@@ -8,7 +8,7 @@ return [
 
     // Configs for the comments panel
     'comments-panel' => [
-        'name' => 'Comments'
+        'name' => 'Comments',
     ],
 
     // Maximum length of comment in comments panel

@@ -34,7 +34,7 @@ class Comment extends Resource
      * @var array
      */
     public static $search = [
-        'comment'
+        'comment',
     ];
 
     /**
