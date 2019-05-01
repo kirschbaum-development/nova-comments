@@ -15,8 +15,6 @@ class Comment extends Model
 
     /**
      * The "booting" method of the model.
-     *
-     * @return void
      */
     public static function boot()
     {

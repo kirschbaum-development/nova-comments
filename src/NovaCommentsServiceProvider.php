@@ -10,8 +10,6 @@ class NovaCommentsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -22,12 +20,10 @@ class NovaCommentsServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/nova-comments.php', 'nova-comments');
+        $this->mergeConfigFrom(__DIR__ . '/../config/nova-comments.php', 'nova-comments');
     }
 
     /**
@@ -37,7 +33,7 @@ class NovaCommentsServiceProvider extends ServiceProvider
     {
         $this->publishes(
             [
-                __DIR__.'/../config/nova-comments.php' => config_path('nova-comments.php'),
+                __DIR__ . '/../config/nova-comments.php' => config_path('nova-comments.php'),
             ]
         );
     }
@@ -47,7 +43,7 @@ class NovaCommentsServiceProvider extends ServiceProvider
      */
     protected function migrations()
     {
-        $this->loadMigrationsFrom(__DIR__.'/../migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../migrations');
     }
 
     /**
@@ -59,8 +55,8 @@ class NovaCommentsServiceProvider extends ServiceProvider
 
         Nova::serving(
             function () {
-                Nova::script('commentable', __DIR__.'/../dist/js/tool.js');
-                Nova::style('commentable', __DIR__.'/../dist/css/tool.css');
+                Nova::script('commentable', __DIR__ . '/../dist/js/tool.js');
+                Nova::style('commentable', __DIR__ . '/../dist/css/tool.css');
             }
         );
     }
