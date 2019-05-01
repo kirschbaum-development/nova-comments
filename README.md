@@ -1,5 +1,6 @@
 # A commenting resource tool for Nova apps
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d3cc58ebefe2480da123f95d43ce1fcc)](https://app.codacy.com/app/Kirschbaum/nova-comments?utm_source=github.com&utm_medium=referral&utm_content=kirschbaum-development/nova-comments&utm_campaign=Badge_Grade_Dashboard)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kirschbaum-development/nova-comments.svg?style=flat-square)](https://packagist.org/packages/kirschbaum-development/nova-comments)
 [![Total Downloads](https://img.shields.io/packagist/dt/kirschbaum-development/nova-comments.svg?style=flat-square)](https://packagist.org/packages/kirschbaum-development/nova-comments)
 
