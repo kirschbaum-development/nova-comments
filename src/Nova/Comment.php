@@ -116,4 +116,13 @@ class Comment extends Resource
     {
         return [];
     }
+
+    public static function availableForNavigation(Request $request)
+    {
+        if (config('nova-comments.display-in-navigation')) {
+            return true;
+        }
+
+        return false;
+    }
 }
