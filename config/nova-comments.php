@@ -1,6 +1,9 @@
 <?php
 
 return [
+    //Should by displayed in navigation
+    'display-in-navigation' => true,
+
     // The resource to use as a commenter. Typically the User resource.
     'commenter' => [
         'nova-resource' => \App\Nova\User::class,
