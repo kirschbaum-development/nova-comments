@@ -14,6 +14,8 @@ use KirschbaumDevelopment\NovaComments\Models\Comment as CommentModel;
 
 class Comment extends Resource
 {
+    public static $displayInNavigation = false;
+    
     /**
      * The model the resource corresponds to.
      *
