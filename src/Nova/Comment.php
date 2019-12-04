@@ -2,7 +2,7 @@
 
 namespace KirschbaumDevelopment\NovaComments\Nova;
 
-use App\Nova\Resource;
+use Laravel\Nova\Resource;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
