@@ -11,12 +11,10 @@ class Comment extends Model
      *
      * @var string
      */
-     protected $table = 'nova_comments';
+    protected $table = 'nova_comments';
 
     /**
      * The "booting" method of the model.
-     *
-     * @return void
      */
     public static function boot()
     {

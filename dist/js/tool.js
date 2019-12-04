@@ -184,7 +184,7 @@ module.exports = __webpack_require__(9);
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Nova.booting(function (Vue, router, store) {
+Nova.booting(function (Vue) {
     Vue.component('commenter', __webpack_require__(3));
 });
 
@@ -311,7 +311,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['resourceName', 'resourceId', 'resource', 'field'],
+    props: ['resourceName', 'resourceId', 'field'],
 
     components: { Comment: __WEBPACK_IMPORTED_MODULE_0__Comment___default.a },
 

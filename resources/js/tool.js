@@ -1,3 +1,3 @@
-Nova.booting((Vue, router, store) => {
-    Vue.component('commenter', require('./components/Tool'))
-})
+Nova.booting((Vue) => {
+    Vue.component('commenter', require('./components/Tool'));
+});

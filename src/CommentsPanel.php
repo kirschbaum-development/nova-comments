@@ -10,8 +10,6 @@ class CommentsPanel extends Panel
 {
     /**
      * Create a new panel instance.
-     *
-     * @return void
      */
     public function __construct()
     {

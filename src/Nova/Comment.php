@@ -34,13 +34,14 @@ class Comment extends Resource
      * @var array
      */
     public static $search = [
-        'comment'
+        'comment',
     ];
 
     /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function fields(Request $request)
@@ -72,6 +73,7 @@ class Comment extends Resource
      * Get the cards available for the request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function cards(Request $request)
@@ -83,6 +85,7 @@ class Comment extends Resource
      * Get the filters available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function filters(Request $request)
@@ -94,6 +97,7 @@ class Comment extends Resource
      * Get the lenses available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function lenses(Request $request)
@@ -105,10 +109,23 @@ class Comment extends Resource
      * Get the actions available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function actions(Request $request)
     {
         return [];
+    }
+
+    /**
+     * Determine if this resource is available for navigation.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     *
+     * @return bool
+     */
+    public static function availableForNavigation(Request $request)
+    {
+        return config('nova-comments.available-for-navigation');
     }
 }
