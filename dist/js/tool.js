@@ -327,7 +327,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-        this.getComments(this.commentsUri);
+        this.getComments(this.commentsUri);        
     },
 
 
