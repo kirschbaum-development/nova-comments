@@ -114,6 +114,14 @@ class Post extends Resource
 
 Of course you are completely free to create your own comments panel, but to get up and running quickly, we recommend using this panel.
 
+### Sidebar Navigation
+
+Occasionally you may want to hide comments from the sidebar. You can easily do this by setting the respective config value to false. Make sure to first publish the configs.
+
+```php
+'available-for-navigation' => false
+```
+
 ### Pagination caveat
 
 Due to an limitation in how Nova paginates results, there is currently no way to set the `perPage` value for the number of comments that will display at a time from a configuration value. Nova's default value is 5 per page. If you would like to set this to a different value, such as 25, we recommend you extend the `Commenter` and set this value with the follwing code:

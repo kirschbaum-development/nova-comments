@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // Sets whether or not Comments should show up in sidebar navigation.
+    'available-for-navigation' => true,
+
     // The resource to use as a commenter. Typically the User resource.
     'commenter' => [
         'nova-resource' => \App\Nova\User::class,
