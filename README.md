@@ -35,7 +35,7 @@ And lastly, any model that you want to have comments needs the `Commentable` tra
 ```php
 use KirschbaumDevelopment\NovaComments\Commentable;
 
-class Post extends ModelNo
+class Post extends Model
 {
     use Commentable;
     
