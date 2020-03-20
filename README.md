@@ -33,9 +33,9 @@ php artisan migrate
 And lastly, any model that you want to have comments needs the `Commentable` trait added to it.
 
 ```php
-use KirschbaumDevelopment\Novacomments\Commentable;
+use KirschbaumDevelopment\NovaComments\Commentable;
 
-class Post extends Model
+class Post extends ModelNo
 {
     use Commentable;
     
