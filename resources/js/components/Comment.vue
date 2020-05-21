@@ -2,8 +2,16 @@
     <div class="commenter__comment py-4 border-t border-40">
         <div class="font-light text-80 text-sm">
             <template v-if="hasCommenter">
-                <a class="no-underline dim text-primary font-bold" :href="commenterUrl" v-text="commenter"></a>
-
+                <router-link
+                    :to="{
+                      name: 'detail',
+                      params: {
+                        resourceName: 'users',
+                        resourceId: commenterId,
+                      },
+                    }"
+                                class="no-underline font-bold dim text-primary"
+                    v-text="commenter"></router-link>
                 said
             </template>
 
@@ -37,11 +45,8 @@
             commenter() {
                 return _.find(this.comment.fields, { attribute: 'commenter' }).value;
             },
-
-            commenterUrl() {
-                let commenterId = _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
-
-                return `/nova/resources/users/${commenterId}`;
+            commenterId() {
+                return _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
             },
 
             date() {
