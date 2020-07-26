@@ -327,7 +327,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-        this.getComments(this.commentsUri);        
+        this.getComments(this.commentsUri);
     },
 
 
@@ -537,9 +537,11 @@ var render = function() {
                   attrs: { href: _vm.commenterUrl },
                   domProps: { textContent: _vm._s(_vm.commenter) }
                 }),
-                _vm._v("\n\n            said\n        ")
+                _vm._v(
+                  "\n\n            " + _vm._s(_vm.__("said")) + "\n        "
+                )
               ]
-            : [_vm._v("\n            Written\n        ")],
+            : [_vm._v("\n            {{__('Written')}\n        ")],
           _vm._v("\n\n        " + _vm._s(_vm.date) + "\n    ")
         ],
         2
@@ -572,7 +574,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "text-90 font-normal text-2xl mb-3" }, [
-      _vm._v("\n        Comments\n    ")
+      _vm._v("\n        " + _vm._s(_vm.__("Comments")) + "\n    ")
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "card mb-6 overflow-hidden" }, [
@@ -583,7 +585,9 @@ var render = function() {
           _c("div", { staticClass: "w-full pt-6 pb-2" }, [
             _c("h4", { staticClass: "font-normal text-80" }, [
               _vm._v(
-                "\n                    Write new comment\n                "
+                "\n                    " +
+                  _vm._s(_vm.__("Write new comment")) +
+                  "\n                "
               )
             ]),
             _vm._v(" "),
@@ -629,7 +633,9 @@ var render = function() {
         [
           _c("div", { staticClass: "help-text" }, [
             _vm._v(
-              "\n                On MacOS, press ⌘ + Enter to save\n            "
+              "\n                " +
+                _vm._s(_vm.__("On MacOS, press ⌘ + Enter to save")) +
+                "\n            "
             )
           ]),
           _vm._v(" "),
@@ -641,7 +647,13 @@ var render = function() {
               attrs: { type: "submit" },
               on: { click: _vm.createComment }
             },
-            [_vm._v("\n                Save Comment\n            ")]
+            [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.__("Save Comment")) +
+                  "\n            "
+              )
+            ]
           )
         ]
       ),
@@ -658,7 +670,7 @@ var render = function() {
                 { staticClass: "w-full py-6" },
                 [
                   _c("h3", { staticClass: "text-90 font-bold text-lg mb-4" }, [
-                    _vm._v("Comments")
+                    _vm._v(_vm._s(_vm.__("Comments")))
                   ]),
                   _vm._v(" "),
                   _vm._l(_vm.data.resources, function(comment, key) {
@@ -689,7 +701,13 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("\n                    Older\n                ")]
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.__("Older")) +
+                      "\n                "
+                  )
+                ]
               ),
               _vm._v(" "),
               _c(
@@ -704,7 +722,13 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("\n                    Newer\n                ")]
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.__("Newer")) +
+                      "\n                "
+                  )
+                ]
               )
             ])
           ])
