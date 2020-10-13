@@ -1,5 +1,9 @@
 {
     "Comments" : "Kommentare",
+    "Comment" : "Kommentar",
+    "Commentable" : "Kommentierbar",
+    "Commenter" : "Kommentarfeld",
+    "Created" : "Erstellt",
     "Write new comment" : "Erstelle einen neuen Kommentar",
     "On MacOS, press ⌘ + Enter to save" : "Zum Speichern unter MacOS, bitte ⌘ + Enter drücken",
     "Save Comment" : "Kommentar speichern",

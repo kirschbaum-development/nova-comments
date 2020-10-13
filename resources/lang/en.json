@@ -1,5 +1,9 @@
 {
     "Comments" : "Comments",
+    "Comment" : "Comment",
+    "Commentable" : "Commentable",
+    "Commenter" : "Commenter",
+    "Created" : "Created",
     "Write new comment" : "Write new comment",
     "On MacOS, press ⌘ + Enter to save" : "On MacOS, press ⌘ + Enter to save",
     "Save Comment" : "Save Comment",
