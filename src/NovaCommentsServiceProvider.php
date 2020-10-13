@@ -24,7 +24,7 @@ class NovaCommentsServiceProvider extends ServiceProvider
         $this->nova();
 
         $this->app->booted(function (): void {
-           $this->translations();
+            $this->translations();
         });
     }
 
