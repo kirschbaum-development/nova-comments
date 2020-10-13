@@ -4,11 +4,11 @@
             <template v-if="hasCommenter">
                 <a class="no-underline dim text-primary font-bold" :href="commenterUrl" v-text="commenter"></a>
 
-                said
+                {{ __('said') }}
             </template>
 
             <template v-else>
-                Written
+                {{ __('Written') }}
             </template>
 
             {{ date }}
@@ -45,23 +45,25 @@
             },
 
             date() {
+                const language = Nova.app.__('Moment Locale');
+                moment.locale(language)
                 let now = moment();
                 let date = moment.utc(_.find(this.comment.fields, { attribute: 'created_at' }).value)
                     .tz(moment.tz.guess());
 
                 if (date.isSame(now, 'minute')) {
-                    return 'just now';
+                    return Nova.app.__('just now');
                 }
 
                 if (date.isSame(now, 'day')) {
-                    return `at ${date.format('LT')}`;
+                    return Nova.app.__('at') + ' ' + date.format('LT');
                 }
 
                 if (date.isSame(now, 'year')) {
-                    return `on ${date.format('MMM D')}`;
+                    return Nova.app.__('on') + ' ' + (language === 'de' ? date.format('D MMM') : date.format('MMM D'));
                 }
 
-                return `on ${date.format('ll')}`;
+                return Nova.app.__('on') + ' ' + date.format('ll');
             },
 
             hasCommenter() {
