@@ -51,7 +51,7 @@ class Comment extends Resource
                 ->alwaysShow()
                 ->hideFromIndex(),
 
-            MorphTo::make(__('Commentable'),'Commentable')->onlyOnIndex(),
+            MorphTo::make(__('Commentable'), 'Commentable')->onlyOnIndex(),
 
             Text::make(__('Comment'), 'comment')
                 ->displayUsing(function ($comment) {
