@@ -13,9 +13,19 @@ class NovaCommentsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../resources/lang/' => resource_path('lang/vendor/nova-comments'),
+        ]);
+
+        $this->loadJSONTranslationsFrom(resource_path('lang/vendor/nova-comments'));
+
         $this->config();
         $this->migrations();
         $this->nova();
+
+        $this->app->booted(function (): void {
+            $this->translations();
+        });
     }
 
     /**
@@ -59,5 +69,13 @@ class NovaCommentsServiceProvider extends ServiceProvider
                 Nova::style('commentable', __DIR__ . '/../dist/css/tool.css');
             }
         );
+    }
+
+    public function translations(): void
+    {
+        $locale = $this->app->getLocale();
+
+        Nova::translations(__DIR__.'/../resources/lang/'.$locale.'.json');
+        Nova::translations(resource_path('lang/vendor/nova-comments/'.$locale.'.json'));
     }
 }
