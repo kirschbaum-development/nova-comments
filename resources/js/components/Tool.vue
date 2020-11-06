@@ -1,14 +1,14 @@
 <template>
     <div>
         <h4 class="text-90 font-normal text-2xl mb-3">
-            Comments
+            {{ __('Comments') }}
         </h4>
 
         <div class="card mb-6 overflow-hidden">
             <div class="flex border-b border-40 remove-bottom-border px-8">
                 <div class="w-full pt-6 pb-2">
                     <h4 class="font-normal text-80">
-                        Write new comment
+                        {{ __('Write new comment') }}
                     </h4>
 
                     <textarea class="w-full form-control form-input form-input-bordered py-3 h-auto mt-2"
@@ -23,19 +23,19 @@
 
             <div class="flex justify-between px-8 pb-4 border-b border-40">
                 <div class="help-text">
-                    On MacOS, press ⌘ + Enter to save
+                    {{ __('On MacOS, press ⌘ + Enter to save') }}
                 </div>
 
                 <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
                     type="submit"
                     @click="createComment">
-                    Save Comment
+                    {{ __('Save Comment') }}
                 </button>
             </div>
 
             <div class="flex border-b border-40 remove-bottom-border px-8" v-if="hasComments">
                 <div class="w-full py-6">
-                    <h3 class="text-90 font-bold text-lg mb-4">Comments</h3>
+                    <h3 class="text-90 font-bold text-lg mb-4">{{ __('Comments') }}</h3>
 
                     <comment :comment="comment" v-for="(comment, key) in data.resources" :key="key"></comment>
                 </div>
@@ -47,14 +47,14 @@
                         :class="paginationClass(hasNextLink)"
                         :disabled="! hasNextLink"
                         @click="getComments(data.next_page_url)">
-                        Older
+                        {{ __('Older') }}
                     </button>
 
                     <button class="btn btn-link py-3 px-4"
                         :class="paginationClass(hasPrevLink)"
                         :disabled="! hasPrevLink"
                         @click="getComments(data.prev_page_url)">
-                        Newer
+                        {{ __('Newer') }}
                     </button>
                 </nav>
             </div>

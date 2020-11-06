@@ -13,7 +13,7 @@ class CommentsPanel extends Panel
      */
     public function __construct()
     {
-        parent::__construct('Comments', $this->prepareFields($this->fields()));
+        parent::__construct(__('Comments'), $this->prepareFields($this->fields()));
     }
 
     /**
