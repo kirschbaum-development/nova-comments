@@ -7,13 +7,17 @@ use Laravel\Nova\ResourceTool;
 class Commenter extends ResourceTool
 {
     /**
-     * Get the displayable name of the resource tool.
+     * Create a new Commenter resource tool instance.
      *
-     * @return string
+     * @param string $name
+     *
+     * @return void
      */
-    public function name()
+    public function __construct($name)
     {
-        return 'Commenter';
+        $this->name = $name;
+
+        parent::__construct();
     }
 
     /**
