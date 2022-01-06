@@ -22,6 +22,11 @@ class Comment extends Model
 
         static::creating(
             function ($comment) {
+                $comment->comment = filter_var(
+                    $comment->comment,
+                    FILTER_SANITIZE_SPECIAL_CHARS
+                );
+
                 if (auth()->check()) {
                     $comment->commenter_id = auth()->id();
                 }
