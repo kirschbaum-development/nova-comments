@@ -11,13 +11,18 @@
             "url": "https://nova.laravel.com"
         }
     ],
-    "homepage": "https://github.com/kirschbaum-development/nova-comments",
+    "homepage": "https://github.com/amukhin-cyberhull/nova-comments",
     "license": "MIT",
     "authors": [
         {
             "name": "Brandon Ferens",
             "email": "brandon@kirschbaumdevelopment.com",
             "role": "Developer"
+        },
+        {
+            "name": "Andrey Mukhin",
+            "email": "centgart@gmail.com",
+            "role": "Contributor"
         }
     ],
     "require": {
