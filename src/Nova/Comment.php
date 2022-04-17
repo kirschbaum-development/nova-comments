@@ -4,6 +4,7 @@ namespace KirschbaumDevelopment\NovaComments\Nova;
 
 use Laravel\Nova\Resource;
 use Illuminate\Support\Str;
+use \Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\MorphTo;
@@ -120,11 +121,11 @@ class Comment extends Resource
     /**
      * Determine if this resource is available for navigation.
      *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      *
      * @return bool
      */
-    public static function availableForNavigation(NovaRequest $request)
+    public static function availableForNavigation(Request $request)
     {
         return config('nova-comments.available-for-navigation');
     }
