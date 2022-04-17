@@ -4,7 +4,7 @@ namespace KirschbaumDevelopment\NovaComments\Nova;
 
 use Laravel\Nova\Resource;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\DateTime;
@@ -40,11 +40,11 @@ class Comment extends Resource
     /**
      * Get the fields displayed by the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return array
      */
-    public function fields(Request $request)
+    public function fields(NovaRequest $request)
     {
         return [
             Textarea::make('comment')
@@ -72,11 +72,11 @@ class Comment extends Resource
     /**
      * Get the cards available for the request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return array
      */
-    public function cards(Request $request)
+    public function cards(NovaRequest $request)
     {
         return [];
     }
@@ -84,11 +84,11 @@ class Comment extends Resource
     /**
      * Get the filters available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return array
      */
-    public function filters(Request $request)
+    public function filters(NovaRequest $request)
     {
         return [];
     }
@@ -96,11 +96,11 @@ class Comment extends Resource
     /**
      * Get the lenses available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return array
      */
-    public function lenses(Request $request)
+    public function lenses(NovaRequest $request)
     {
         return [];
     }
@@ -108,11 +108,11 @@ class Comment extends Resource
     /**
      * Get the actions available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return array
      */
-    public function actions(Request $request)
+    public function actions(NovaRequest $request)
     {
         return [];
     }
@@ -120,11 +120,11 @@ class Comment extends Resource
     /**
      * Determine if this resource is available for navigation.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Nova\Http\Requests\NovaRequest  $request
      *
      * @return bool
      */
-    public static function availableForNavigation(Request $request)
+    public static function availableForNavigation(NovaRequest $request)
     {
         return config('nova-comments.available-for-navigation');
     }
