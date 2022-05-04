@@ -125,7 +125,7 @@
                     viaRelationship: 'comments',
                 };
 
-                axios.post(this.baseCommentUri, payload)
+                Nova.request().post(this.baseCommentUri, payload)
                     .then(() => {
                         this.getComments(this.commentsUri);
 
@@ -137,7 +137,7 @@
             },
 
             getComments(uri) {
-                axios.get(`${uri}${this.queryParams}`)
+                Nova.request().get(`${uri}${this.queryParams}`)
                     .then(({ data }) => this.data = data);
             },
 
