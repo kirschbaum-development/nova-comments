@@ -55,15 +55,13 @@ class NovaCommentsServiceProvider extends ServiceProvider
 
         Nova::serving(
             function () {
+                Nova::provideToScript([
+                    'tool' => [
+                        'nova_path' => config('nova.path'),
+                    ],
+                ]);
                 Nova::script('commentable', __DIR__ . '/../dist/js/tool.js');
                 Nova::style('commentable', __DIR__ . '/../dist/css/tool.css');
-                if (config('nova.path')) {
-                    Nova::provideToScript([
-                        'tool' => [
-                            'nova_path' => config('nova.path'),
-                        ],
-                    ]);
-                }
 
             }
         );
