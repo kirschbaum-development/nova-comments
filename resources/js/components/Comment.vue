@@ -20,6 +20,7 @@
 
 <script>
     // require('moment-timezone');
+    require('lodash');
 
     export default {
         props: {
