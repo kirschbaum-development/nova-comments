@@ -24,7 +24,10 @@
 
     export default {
         props: {
-            base_path: String,
+            base_path: {
+                type: String,
+                required: true
+            },
             comment: {
                 type: Object,
                 required: true

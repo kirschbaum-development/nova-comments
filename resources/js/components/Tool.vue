@@ -37,7 +37,7 @@
                 <div class="w-full py-6">
                     <h3 class="text-90 font-bold text-lg mb-4">Comments</h3>
 
-                    <comment :comment="comment" v-for="(comment, key) in data.resources" :key="key" v-bind:base_path="base_path"></comment>
+                    <comment :comment="comment" v-for="(comment, key) in data.resources" :key="key" :base_path="base_path"></comment>
                 </div>
             </div>
 
