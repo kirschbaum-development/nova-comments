@@ -42,7 +42,7 @@
             commenterUrl() {
                 let commenterId = _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
 
-                return `${Nova.config("path")}/resources/users/${commenterId}`;
+                return `${Nova.config("base")}/resources/users/${commenterId}`;
             },
 
             date() {
