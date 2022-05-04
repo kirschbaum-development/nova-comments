@@ -131,9 +131,9 @@
 
                         this.resetComment();
 
-                        this.$toasted.show(`A new comment has been created.`, { type: 'success' });
+                        Nova.success(`A new comment has been created.`);
                     })
-                    .catch(response => this.$toasted.show(response, { type: 'error' }));
+                    .catch(response => Nova.error(response));
             },
 
             getComments(uri) {
