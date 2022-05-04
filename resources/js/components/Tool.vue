@@ -4,8 +4,8 @@
             Comments
         </h4>
 
-        <div class="card mb-6 overflow-hidden">
-            <div class="flex border-b border-40 remove-bottom-border px-8">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow pt-2">
+            <div class="flex border-40 remove-bottom-border px-8">
                 <div class="w-full pt-6 pb-2">
                     <h4 class="font-normal text-80">
                         Write new comment
@@ -26,7 +26,7 @@
                     On MacOS, press ⌘ + Enter to save
                 </div>
 
-                <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
+                <button class="flex-shrink-0 shadow rounded focus:outline-none focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 text-white dark:text-gray-800 inline-flex items-center font-bold px-4 h-9 text-sm flex-shrink-0 mb-2"
                     type="submit"
                     @click="createComment">
                     Save Comment
