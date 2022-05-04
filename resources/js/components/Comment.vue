@@ -2,7 +2,7 @@
     <div class="commenter__comment py-4 border-t border-40">
         <div class="font-light text-80 text-sm">
             <template v-if="hasCommenter">
-                <a class="no-underline dim text-primary font-bold" :href="commenterUrl" v-text="commenter"></a>
+                <a class="link-default" :href="commenterUrl" v-text="commenter"></a>
 
                 said
             </template>

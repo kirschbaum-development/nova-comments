@@ -6,7 +6,7 @@
 
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow pt-2">
             <div class="flex border-40 remove-bottom-border px-8">
-                <div class="w-full pt-6 pb-2">
+                <div class="w-full mt-6 pb-2">
                     <h4 class="font-normal text-80">
                         Write new comment
                     </h4>
@@ -26,7 +26,7 @@
                     On MacOS, press ⌘ + Enter to save
                 </div>
 
-                <button class="flex-shrink-0 shadow rounded focus:outline-none focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 text-white dark:text-gray-800 inline-flex items-center font-bold px-4 h-9 text-sm flex-shrink-0 mb-2"
+                <button class="flex-shrink-0 shadow rounded focus:outline-none focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 text-white dark:text-gray-800 inline-flex items-center font-bold px-4 h-9 text-sm flex-shrink-0 mb-3 mt-4"
                     type="submit"
                     @click="createComment">
                     Save Comment
@@ -43,14 +43,14 @@
 
             <div class="bg-20 rounded-b" v-if="hasPagination">
                 <nav class="flex justify-between items-center">
-                    <button class="btn btn-link py-3 px-4"
+                    <button class="text-xs font-bold py-3 px-4 focus:outline-none rounded-bl-lg focus:ring focus:ring-inset"
                         :class="paginationClass(hasNextLink)"
                         :disabled="! hasNextLink"
                         @click="getComments(data.next_page_url)">
                         Older
                     </button>
 
-                    <button class="btn btn-link py-3 px-4"
+                    <button class="text-xs font-bold py-3 px-4 focus:outline-none rounded-bl-lg focus:ring focus:ring-inset"
                         :class="paginationClass(hasPrevLink)"
                         :disabled="! hasPrevLink"
                         @click="getComments(data.prev_page_url)">
@@ -143,8 +143,8 @@
 
             paginationClass(isActive) {
                 return isActive
-                    ? 'text-primary dim'
-                    : 'text-80 opacity-50';
+                    ? 'text-primary-500 hover:text-primary-400 active:text-primary-600'
+                    : 'text-gray-300 dark:text-gray-600';
             },
 
             resetComment() {
