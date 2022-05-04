@@ -37,7 +37,7 @@
                 <div class="w-full py-6">
                     <h3 class="text-90 font-bold text-lg mb-4">Comments</h3>
 
-                    <comment :comment="comment" v-for="(comment, key) in data.resources" :key="key" :base_path="base_path"></comment>
+                    <comment :comment="comment" v-for="(comment, key) in data.resources" :key="key"></comment>
                 </div>
             </div>
 
@@ -74,7 +74,6 @@
             return {
                 baseCommentUri: '/nova-api/comments',
                 comment: '',
-                base_path: '/nova',
                 data: {
                     next_page_url: '',
                     prev_page_url: '',
@@ -84,8 +83,6 @@
         },
 
         mounted() {
-            this.base_path = Nova.config.tool.nova_path;
-            console.log(this.base_path);
             this.getComments(this.commentsUri);
         },
 

@@ -24,10 +24,6 @@
 
     export default {
         props: {
-            base_path: {
-                type: String,
-                required: true
-            },
             comment: {
                 type: Object,
                 required: true
@@ -46,7 +42,7 @@
             commenterUrl() {
                 let commenterId = _.find(this.comment.fields, { attribute: 'commenter' }).belongsToId;
 
-                return `${this.base_path}/resources/users/${commenterId}`;
+                return `${Nova.config("path")}/resources/users/${commenterId}`;
             },
 
             date() {
