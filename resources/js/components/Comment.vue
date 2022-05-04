@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    // require('moment-timezone');
+    require('moment-timezone');
     require('lodash');
 
     export default {
