@@ -59,5 +59,12 @@ class NovaCommentsServiceProvider extends ServiceProvider
                 Nova::style('commentable', __DIR__ . '/../dist/css/tool.css');
             }
         );
+
+        Nova::router()
+            ->group(function ($router) {
+                $router->get('commenter', function ($request) {
+                    return inertia('commenter');
+                });
+            });
     }
 }
