@@ -64,7 +64,6 @@ class Comment extends Resource
                 ->exceptOnForms(),
 
             DateTime::make('Created', 'created_at')
-                ->format(config('nova-comments.date-format'))
                 ->exceptOnForms()
                 ->sortable(),
         ];
