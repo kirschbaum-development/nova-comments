@@ -1,3 +1,5 @@
-Nova.booting((Vue) => {
-    Vue.component('commenter', require('./components/Tool'));
-});
+import Tool from './components/Tool'
+
+Nova.booting((app, store) => {
+  Nova.inertia('commenter', Tool)
+})
