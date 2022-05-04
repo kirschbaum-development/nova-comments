@@ -1,3 +1,5 @@
+import Tool from './components/Tool'
+
 Nova.booting((app, store) => {
-  Nova.inertia('commenter', require('./components/Tool').default)
+  Nova.inertia('Commenter', Tool)
 })
