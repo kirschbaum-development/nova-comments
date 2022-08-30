@@ -15,7 +15,7 @@
         "laravel-nova": "^1.0"
     },
     "dependencies": {
-        "moment-timezone": "^0.5.25",
+        "moment-timezone": "^0.5.35",
         "vue": "^2.5.0"
     }
 }
