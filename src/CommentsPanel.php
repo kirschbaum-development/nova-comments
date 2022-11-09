@@ -21,7 +21,7 @@ class CommentsPanel extends Panel
      *
      * @return array
      */
-    protected function fields()
+    protected function fields(): array
     {
         return [
             MorphMany::make(

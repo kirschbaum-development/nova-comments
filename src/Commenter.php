@@ -11,7 +11,7 @@ class Commenter extends ResourceTool
      *
      * @return string
      */
-    public function name()
+    public function name(): string
     {
         return 'Commenter';
     }
@@ -21,7 +21,7 @@ class Commenter extends ResourceTool
      *
      * @return string
      */
-    public function component()
+    public function component(): string
     {
         return 'commenter';
     }

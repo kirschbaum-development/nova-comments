@@ -1,5 +1,5 @@
 {
-    "name": "amukhin-cyberhull/nova-comments",
+    "name": "kirschbaum-development/nova-comments",
     "description": "A Laravel Nova resource for commenting on model.",
     "keywords": [
         "laravel",
@@ -11,7 +11,7 @@
             "url": "https://nova.laravel.com"
         }
     ],
-    "homepage": "https://github.com/amukhin-cyberhull/nova-comments",
+    "homepage": "https://github.com/kirschbaum-development/nova-comments",
     "license": "MIT",
     "authors": [
         {

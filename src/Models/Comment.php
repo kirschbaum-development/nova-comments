@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KirschbaumDevelopment\NovaComments\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Comment extends Model
 {
@@ -16,12 +20,12 @@ class Comment extends Model
     /**
      * The "booting" method of the model.
      */
-    public static function boot()
+    public static function boot(): void
     {
         parent::boot();
 
         static::creating(
-            function ($comment) {
+            function ($comment): void {
                 if (auth()->check()) {
                     $comment->commenter_id = auth()->id();
                 }
@@ -30,17 +34,17 @@ class Comment extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return MorphTo
      */
-    public function commentable()
+    public function commentable(): MorphTo
     {
         return $this->morphTo();
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
-    public function commenter()
+    public function commenter(): BelongsTo
     {
         return $this->belongsTo(config('auth.providers.users.model'), 'commenter_id');
     }

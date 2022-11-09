@@ -45,7 +45,7 @@ class Comment extends Resource
      *
      * @return array
      */
-    public function fields(NovaRequest $request)
+    public function fields(NovaRequest $request): array
     {
         return [
             Textarea::make('comment')

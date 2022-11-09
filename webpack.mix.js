@@ -8,4 +8,4 @@ mix
   .vue({ version: 3 })
   .css('resources/css/tool.css', 'css')
   .css('resources/css/field.css', 'css')
-  .nova('amukhin-cyberhull/nova-comments')
+  .nova('kirschbaum-development/nova-comments')
