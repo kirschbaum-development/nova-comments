@@ -21,7 +21,7 @@
     },
     "dependencies": {
         "lodash": "^4.17.21",
-        "moment-timezone": "^0.5.25",
-        "vue": "^2.5.0"
+        "moment-timezone": "^0.5.38",
+        "vue": "^3.2.43"
     }
 }
