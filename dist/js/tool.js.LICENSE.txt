@@ -15,4 +15,8 @@
 
 //! moment-timezone.js
 
+//! moment.js
+
+//! moment.js locale configuration
+
 //! version : 0.5.38
