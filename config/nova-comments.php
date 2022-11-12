@@ -16,6 +16,4 @@ return [
 
     // Maximum length of comment in comments panel
     'limit' => 100,
-
-    'date-format' => 'MMM DD, YYYY',
 ];
