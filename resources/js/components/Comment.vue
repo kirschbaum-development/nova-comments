@@ -19,8 +19,6 @@
 </template>
 
 <script>
-    require('lodash');
-    import moment from 'moment-timezone';
 
     export default {
         props: {

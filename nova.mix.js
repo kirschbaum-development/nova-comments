@@ -12,6 +12,13 @@ class NovaExtension {
   }
 
   webpackConfig(webpackConfig) {
+
+    webpackConfig.plugins.push(
+      new webpack.ProvidePlugin({
+        moment: 'moment-timezone'
+      })
+    )
+
     webpackConfig.externals = {
       vue: 'Vue',
     }

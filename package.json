@@ -14,11 +14,9 @@
         "@vue/compiler-sfc": "^3.2.22",
         "laravel-mix": "^6.0.41",
         "postcss": "^8.3.11",
-        "resolve-url-loader": "^5.0.0",
         "vue-loader": "^16.8.3"
     },
     "dependencies": {
-        "lodash": "^4.17.21",
         "moment-timezone": "^0.5.38"
     }
 }
