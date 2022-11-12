@@ -12,11 +12,11 @@
                     </h4>
 
                     <textarea class="w-full form-control form-input form-input-bordered py-3 h-auto mt-2"
-                        id="commenter"
-                        dusk="commenter"
-                        rows="5"
-                        v-model="comment"
-                        @keyup.enter.93="createComment">
+                    id="commenter"
+                    dusk="commenter"
+                    rows="5"
+                    v-model="comment"
+                    @keydown.enter.meta="createComment">
                     </textarea>
                 </div>
             </div>
