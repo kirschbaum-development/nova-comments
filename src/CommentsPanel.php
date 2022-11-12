@@ -20,8 +20,6 @@ class CommentsPanel extends Panel
 
     /**
      * Fields for the comment panel.
-     *
-     * @return array
      */
     protected function fields(): array
     {

@@ -40,9 +40,6 @@ class Comment extends Resource
 
     /**
      * Get the fields displayed by the resource.
-     *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
-     * @return array
      */
     public function fields(NovaRequest $request): array
     {
@@ -70,55 +67,40 @@ class Comment extends Resource
 
     /**
      * Get the cards available for the request.
-     *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
-     * @return array
      */
-    public function cards(NovaRequest $request)
+    public function cards(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the filters available for the resource.
-     *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
-     * @return array
      */
-    public function filters(NovaRequest $request)
+    public function filters(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
-     * @return array
      */
-    public function lenses(NovaRequest $request)
+    public function lenses(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
-     *
-     * @param  \Nova\Http\Requests\NovaRequest  $request
-     * @return array
      */
-    public function actions(NovaRequest $request)
+    public function actions(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Determine if this resource is available for navigation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return bool
      */
-    public static function availableForNavigation(Request $request)
+    public static function availableForNavigation(Request $request): bool
     {
         return config('nova-comments.available-for-navigation');
     }

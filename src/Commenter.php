@@ -10,8 +10,6 @@ class Commenter extends ResourceTool
 {
     /**
      * Get the displayable name of the resource tool.
-     *
-     * @return string
      */
     public function name(): string
     {
@@ -20,8 +18,6 @@ class Commenter extends ResourceTool
 
     /**
      * Get the component name for the resource tool.
-     *
-     * @return string
      */
     public function component(): string
     {
