@@ -2,15 +2,16 @@
 
 namespace KirschbaumDevelopment\NovaComments\Nova;
 
-use Laravel\Nova\Resource;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\MorphTo;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\BelongsTo;
+use Illuminate\Support\Str;
 use KirschbaumDevelopment\NovaComments\Models\Comment as CommentModel;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\MorphTo;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Resource;
 
 class Comment extends Resource
 {
@@ -39,12 +40,8 @@ class Comment extends Resource
 
     /**
      * Get the fields displayed by the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return array
      */
-    public function fields(Request $request)
+    public function fields(NovaRequest $request): array
     {
         return [
             Textarea::make('comment')
@@ -63,7 +60,6 @@ class Comment extends Resource
                 ->exceptOnForms(),
 
             DateTime::make('Created', 'created_at')
-                ->format(config('nova-comments.date-format'))
                 ->exceptOnForms()
                 ->sortable(),
         ];
@@ -71,60 +67,40 @@ class Comment extends Resource
 
     /**
      * Get the cards available for the request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return array
      */
-    public function cards(Request $request)
+    public function cards(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the filters available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return array
      */
-    public function filters(Request $request)
+    public function filters(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return array
      */
-    public function lenses(Request $request)
+    public function lenses(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return array
      */
-    public function actions(Request $request)
+    public function actions(NovaRequest $request): array
     {
         return [];
     }
 
     /**
      * Determine if this resource is available for navigation.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return bool
      */
-    public static function availableForNavigation(Request $request)
+    public static function availableForNavigation(Request $request): bool
     {
         return config('nova-comments.available-for-navigation');
     }

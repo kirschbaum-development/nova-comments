@@ -16,3 +16,8 @@ All notable changes to `nova-comments` will be documented in this file
 - Codacy badge
 - Removed `console.log`. Thanks to [@eugenevdm](https://github.com/eugenevdm) for the suggestion [#14](https://github.com/kirschbaum-development/nova-comments/pull/14).
 - Navigation for Comments can now be hidden. Even though the PR wasn't accepted, thanks to [@0x15f](https://github.com/0x15f) for a good place to start.
+
+## 4.0.0 - 2022-11-12
+
+- Added support for Nova ^4.0
+- Breaks support for older versions of Nova

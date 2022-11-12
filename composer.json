@@ -18,10 +18,16 @@
             "name": "Brandon Ferens",
             "email": "brandon@kirschbaumdevelopment.com",
             "role": "Developer"
+        },
+        {
+            "name": "Andrey Mukhin",
+            "email": "centgart@gmail.com",
+            "role": "Contributor"
         }
     ],
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=8.0",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -39,5 +45,18 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "install:tools": [
+            "cd ./tools/pint && composer install"
+        ],
+        "lint": [
+            "@install:tools",
+            "./tools/pint/vendor/bin/pint"
+        ],
+        "lint:check":[
+            "@install:tools",
+            "./tools/pint/vendor/bin/pint --test -v"
+        ]
+    }
 }

@@ -14,7 +14,8 @@ This package contains an inline commenting form for any resource to easily add c
 
 ## Requirements
 
-This Nova resource tool requires Nova 2.0 or higher.
+This Nova resource tool requires Nova 4.0 or higher.  
+For older version of Nova, use the tagged version [1.0.2](https://github.com/kirschbaum-development/nova-comments/releases/tag/1.0.2)
 
 ## Installation
 

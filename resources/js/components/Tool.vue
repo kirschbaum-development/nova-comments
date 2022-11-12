@@ -4,19 +4,19 @@
             Comments
         </h4>
 
-        <div class="card mb-6 overflow-hidden">
-            <div class="flex border-b border-40 remove-bottom-border px-8">
-                <div class="w-full pt-6 pb-2">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow pt-2">
+            <div class="flex border-40 remove-bottom-border px-8">
+                <div class="w-full mt-6 pb-2">
                     <h4 class="font-normal text-80">
                         Write new comment
                     </h4>
 
                     <textarea class="w-full form-control form-input form-input-bordered py-3 h-auto mt-2"
-                        id="commenter"
-                        dusk="commenter"
-                        rows="5"
-                        v-model="comment"
-                        @keyup.enter.93="createComment">
+                    id="commenter"
+                    dusk="commenter"
+                    rows="5"
+                    v-model="comment"
+                    @keydown.enter.meta="createComment">
                     </textarea>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     On MacOS, press ⌘ + Enter to save
                 </div>
 
-                <button class="btn btn-default btn-primary inline-flex items-center relative mt-4"
+                <button class="flex-shrink-0 shadow rounded focus:outline-none focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 text-white dark:text-gray-800 inline-flex items-center font-bold px-4 h-9 text-sm flex-shrink-0 mb-3 mt-4"
                     type="submit"
                     @click="createComment">
                     Save Comment
@@ -43,14 +43,14 @@
 
             <div class="bg-20 rounded-b" v-if="hasPagination">
                 <nav class="flex justify-between items-center">
-                    <button class="btn btn-link py-3 px-4"
+                    <button class="text-xs font-bold py-3 px-4 focus:outline-none rounded-bl-lg focus:ring focus:ring-inset"
                         :class="paginationClass(hasNextLink)"
                         :disabled="! hasNextLink"
                         @click="getComments(data.next_page_url)">
                         Older
                     </button>
 
-                    <button class="btn btn-link py-3 px-4"
+                    <button class="text-xs font-bold py-3 px-4 focus:outline-none rounded-bl-lg focus:ring focus:ring-inset"
                         :class="paginationClass(hasPrevLink)"
                         :disabled="! hasPrevLink"
                         @click="getComments(data.prev_page_url)">
@@ -125,26 +125,26 @@
                     viaRelationship: 'comments',
                 };
 
-                axios.post(this.baseCommentUri, payload)
+                Nova.request().post(this.baseCommentUri, payload)
                     .then(() => {
                         this.getComments(this.commentsUri);
 
                         this.resetComment();
 
-                        this.$toasted.show(`A new comment has been created.`, { type: 'success' });
+                        Nova.success(`A new comment has been created.`);
                     })
-                    .catch(response => this.$toasted.show(response, { type: 'error' }));
+                    .catch(response => Nova.error(response));
             },
 
             getComments(uri) {
-                axios.get(`${uri}${this.queryParams}`)
+                Nova.request().get(`${uri}${this.queryParams}`)
                     .then(({ data }) => this.data = data);
             },
 
             paginationClass(isActive) {
                 return isActive
-                    ? 'text-primary dim'
-                    : 'text-80 opacity-50';
+                    ? 'text-primary-500 hover:text-primary-400 active:text-primary-600'
+                    : 'text-gray-300 dark:text-gray-600';
             },
 
             resetComment() {
