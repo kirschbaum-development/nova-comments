@@ -2,16 +2,16 @@
 
 namespace KirschbaumDevelopment\NovaComments\Nova;
 
-use Laravel\Nova\Resource;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use \Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\MorphTo;
-use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\BelongsTo;
 use KirschbaumDevelopment\NovaComments\Models\Comment as CommentModel;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\MorphTo;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Resource;
 
 class Comment extends Resource
 {
@@ -42,7 +42,6 @@ class Comment extends Resource
      * Get the fields displayed by the resource.
      *
      * @param  \Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function fields(NovaRequest $request): array
@@ -73,7 +72,6 @@ class Comment extends Resource
      * Get the cards available for the request.
      *
      * @param  \Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function cards(NovaRequest $request)
@@ -85,7 +83,6 @@ class Comment extends Resource
      * Get the filters available for the resource.
      *
      * @param  \Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function filters(NovaRequest $request)
@@ -97,7 +94,6 @@ class Comment extends Resource
      * Get the lenses available for the resource.
      *
      * @param  \Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function lenses(NovaRequest $request)
@@ -109,7 +105,6 @@ class Comment extends Resource
      * Get the actions available for the resource.
      *
      * @param  \Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function actions(NovaRequest $request)
@@ -121,7 +116,6 @@ class Comment extends Resource
      * Determine if this resource is available for navigation.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return bool
      */
     public static function availableForNavigation(Request $request)

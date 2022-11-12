@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KirschbaumDevelopment\NovaComments;
 
-use Laravel\Nova\Panel;
-use Laravel\Nova\Fields\MorphMany;
 use KirschbaumDevelopment\NovaComments\Nova\Comment;
+use Laravel\Nova\Fields\MorphMany;
+use Laravel\Nova\Panel;
 
 class CommentsPanel extends Panel
 {

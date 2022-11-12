@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KirschbaumDevelopment\NovaComments;
 
 use Laravel\Nova\ResourceTool;
