@@ -15,7 +15,8 @@ class NovaExtension {
 
     webpackConfig.plugins.push(
       new webpack.ProvidePlugin({
-        moment: 'moment-timezone'
+        moment: 'moment-timezone',
+        _: 'lodash',
       })
     )
 
