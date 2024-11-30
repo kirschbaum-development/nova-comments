@@ -143,6 +143,18 @@ class Commenter extends NovaCommenter
 
 Then use this class instead of the default `Commenter` class within your resources.
 
+### Customizing the comment
+
+By default, the `Comment` model will strip tags from the comment body. If you would like to modify this behavior, you can pass an callback to the `Comment::whenCreating` method. This callback will receive the comment model instance as a parameter.
+
+```php
+Comment::whenCreating(function (Comment $comment) {
+    $comment->comment = strip_tags($comment->comment);
+});
+```
+
+```php
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
