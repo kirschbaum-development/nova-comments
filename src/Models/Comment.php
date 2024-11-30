@@ -46,24 +46,18 @@ class Comment extends Model
         });
     }
 
-    /**
-     * @return MorphTo
-     */
     public function commentable(): MorphTo
     {
         return $this->morphTo();
     }
 
-    /**
-     * @return BelongsTo
-     */
     public function commenter(): BelongsTo
     {
         return $this->belongsTo(config('auth.providers.users.model'), 'commenter_id');
     }
 
     /**
-     * @param Closure|callable $callback
+     * @param  Closure|callable  $callback
      */
     public static function whenCreating($callback): void
     {
