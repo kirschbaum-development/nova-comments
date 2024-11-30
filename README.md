@@ -153,8 +153,6 @@ Comment::whenCreating(function (Comment $comment) {
 });
 ```
 
-```php
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
